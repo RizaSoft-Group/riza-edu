@@ -1,13 +1,8 @@
 <template>
-  <div>
-    Appvue
-  </div>
+  <Home/>
 </template>
-<script>
-export default {
-  
-}
+<script setup>
+import Home from './homepage/Home.vue';
+
 </script>
-<style scoped>
-  
-</style>
+<style scoped></style>
