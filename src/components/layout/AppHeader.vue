@@ -27,6 +27,10 @@
       <el-menu-item index="5">Premium Theme</el-menu-item>
     </el-menu>
     <div class="flex items-center gap-5">
+      <el-icon @click="toggleTheme()" class="cursor-pointer hover:opacity-75 transition-opacity duration-150">
+        <Sunny color="#303133" v-if="currentTheme !== 'dark'" />
+        <Moon color="#303133" v-else />
+      </el-icon>
       <lang-select></lang-select>
       <el-icon
         class="cursor-pointer hover:text-[#E6A23C]! transition-colors duration-300"
@@ -48,6 +52,12 @@ import LangSelect from '../ui/LangSelect.vue';
 const activeIndex = ref('0')
 const handleSelect = (key, keyPath) => {
   console.log(key, keyPath)
+}
+
+const currentTheme = ref('light')
+const toggleTheme = () => {
+  currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light'
+  console.log('Toggle theme to:', currentTheme.value)
 }
 </script>
 
