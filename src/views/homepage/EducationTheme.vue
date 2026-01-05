@@ -18,9 +18,11 @@
                 <p class="mb-6 text-gray-700 text-sm md:text-base max-w-2xl mx-auto">
                     The next level of LMS WordPress Theme. Learn anytime and anywhere.
                 </p>
+            <router-link to="/course">
                 <el-button type="warning" round size="large">
                     Explorer Course
                 </el-button>
+            </router-link>
             </div>
 
             <!-- right image -->
