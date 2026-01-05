@@ -1,14 +1,18 @@
 <template lang="html">
-    <div class="container px-30 mx-auto py-20">
+    <div class="container px-5 py-22.5  mx-auto">
         <div class="categories-header flex justify-between items-center">
             <div>
                 <h1 class="font-bold text-3xl mb-3">Top Categories</h1>
                 <p>Explore our Popular Categories</p>
             </div>
-            <router-link to="allcategories" class="rounded-[50px] px-3 py-1.5 border-2 border-gray-300 transition duration-300 tranform hover:bg-orange-500! hover:text-white! hover:border-orange-500!">All Categories</router-link>
+            <router-link to="allcategories">
+                <el-button type="warning" round size="large">
+                    All Categories
+                </el-button>
+            </router-link>
         </div>
 
-        <div class="categories-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-10">
+        <div class="categories-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mt-10">
             <router-link to="/art-design"
                 class="block rounded-xl bg-white py-15 px-auto lg:min-w-6 text-center shadow-sm transition duration-300 transform hover:-translate-y-3 hover:shadow-xl hover:text-orange-500">
                 <el-icon size="48" class="mb-4 text-orange-500!">
