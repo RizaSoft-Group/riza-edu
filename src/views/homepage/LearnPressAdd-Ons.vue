@@ -6,9 +6,11 @@
                 <h1 class="text-4xl font-bold">LearnPress Add-On</h1>
                 <p class="mt-5 mb-5">The next level of LearnPress - LMS WordPress Plugin. More Powerful, Flexible and
                     Magical Inside</p>
-                <el-button class="!bg-orange-500 !text-white !p-5 !rounded-full">
-                    Explorer Course
-                </el-button>
+                <router-link to="/course">
+                    <el-button type="warning" round size="large"> 
+                        Explorer Course
+                    </el-button>
+                </router-link>
             </div>
 
             <div class="hidden xl:block">
@@ -63,7 +65,7 @@
 </template>
 <style scoped>
 .learnpress {
-    background-image: linear-gradient(to right,rgba(33, 240, 185, 0.4), rgba(255, 77, 77, 0.4));
+    background-image: linear-gradient(to right, rgba(33, 240, 185, 0.4), rgba(255, 77, 77, 0.4));
     border-radius: 15px;
 }
 </style>
