@@ -1,19 +1,20 @@
 <template>
-    <div class="container px-30  mx-auto">
+    <div class="container px-5  mx-auto">
         <div class="categories-header flex justify-between items-center">
             <div>
                 <h1 class="font-bold text-3xl mb-3">Featured Courses</h1>
                 <p>Explore our Popular Categories</p>
             </div>
-            <el-button
-                class="rounded-[50px]! border-2! transition duration-300 tranform hover:bg-orange-500! hover:text-white! hover:border-orange-500!">
-                All Courses
-            </el-button>
+            <router-link to="allcourses">
+                <el-button type="warning" round size="large">
+                    All Courses
+                </el-button>
+            </router-link>
         </div>
-        <div class="courses-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <div class="courses-cards grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-10">
             <router-link 
                 to="/learnpress"
-                class="card group block rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img 
                         src="/featurecatigories/learnpress.jpg" 
@@ -21,8 +22,8 @@
                         class="w-full h-64 object-cover rounded-t-lg" 
                     />
                 </div>
-                <div class="card-content p-6">
-                    <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500 ">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
+                    <h2 class="mb-auto font-bold text-xl transition-colors duration-300 group-hover:text-orange-500 ">
                         Create An LMS Website With LearnePress
                     </h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
@@ -53,13 +54,13 @@
             </router-link>
 
             <router-link to="/learnpress"
-                class="card group block rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img src="/featurecatigories/thimpress.jpg" alt="learnpress"
                         class="w-full h-64 object-cover rounded-t-lg" />
                 </div>
-                <div class="card-content p-6">
-                    <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
+                    <h2 class="mb-auto font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">
                         Design A Website With ThimPress
                     </h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
@@ -90,12 +91,12 @@
             </router-link>
 
             <router-link to="/learnpress"
-                class="card group block rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img src="/featurecatigories/image.jpg" alt="learnpress"
                         class="w-full h-64 object-cover rounded-t-lg" />
                 </div>
-                <div class="card-content p-6">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
                     <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">Create
                         An LMS Website With LearnePress</h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
@@ -126,12 +127,12 @@
             </router-link>
 
             <router-link to="/learnpress"
-                class="card groupblock rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img src="/featurecatigories/image-1.jpg" alt="learnpress"
                         class="w-full h-64 object-cover rounded-t-lg" />
                 </div>
-                <div class="card-content p-6">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
                     <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">Create
                         An LMS Website With LearnePress</h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
@@ -162,12 +163,12 @@
             </router-link>
 
             <router-link to="/learnpress"
-                class="card group block rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img src="/featurecatigories/image-2.png" alt="learnpress"
                         class="w-full h-64 object-cover rounded-t-lg" />
                 </div>
-                <div class="card-content p-6">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
                     <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">Create
                         An LMS Website With LearnePress</h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
@@ -198,12 +199,12 @@
             </router-link>
 
             <router-link to="/learnpress"
-                class="card group block rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
+                class="card flex flex-col rounded-lg bg-white shadow-sm hover:shadow-lg hover:-translate-y-5 transition duration-300 transform">
                 <div class="card-header">
                     <img src="/featurecatigories/image-3.jpg" alt="learnpress"
                         class="w-full h-64 object-cover rounded-t-lg" />
                 </div>
-                <div class="card-content p-6">
+                <div class="card-content flex-1 flex flex-col justify-end p-6">
                     <h2 class="mb-2 font-bold text-xl transition-colors duration-300 group-hover:text-orange-500">Create
                         An LMS Website With LearnePress</h2>
                     <div class="flex items-center text-sm text-gray-600 my-8">
