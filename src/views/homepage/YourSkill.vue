@@ -34,9 +34,11 @@
                     <h5 class="ms-2">Certification</h5>
                 </div>
 
-                <el-button type="warning" round size="large">
-                    Explorer Course
-                </el-button>
+                <router-link to="/courses">
+                    <el-button type="warning" round size="large">
+                        Explorer Course
+                    </el-button>
+                </router-link>
             </div>
         </div>
     </div>
