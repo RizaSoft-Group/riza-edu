@@ -1,6 +1,6 @@
 <template>
-    <footer class="footer bg-gray-100 py-20">
-        <div class="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
+    <footer class="footer bg-gray-100">
+        <div class="container mx-auto py-20 px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
             <div class="flex flex-col gap-8">
                 <router-link to="/">
                     <img src="/logo.svg" alt="EduPress" class="w-41.75 h-auto">
