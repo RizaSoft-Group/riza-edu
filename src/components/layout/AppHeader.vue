@@ -15,8 +15,8 @@
       :ellipsis="false"
       @select="handleSelect"
     >
-      <el-menu-item index="0">Home</el-menu-item>
-      <el-menu-item index="1">Courses</el-menu-item>
+      <el-menu-item index="0"><router-link to="/">Home</router-link></el-menu-item>
+      <el-menu-item index="1"><router-link to="/course">Courses</router-link></el-menu-item>
       <el-menu-item index="2">Blog</el-menu-item>
       <el-sub-menu index="3">
         <template #title>Page</template>
