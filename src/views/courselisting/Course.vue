@@ -1,0 +1,27 @@
+<template lang="html">
+    <div class="container px-5 mx-auto py-10">
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+
+            <!-- Course List -->
+            <div class="lg:col-span-3">
+                <CourseList />
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <CourseSidebar />
+            </div>
+
+            <div class="col-span-1">
+                <CoursePagination />
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import CourseSidebar from './CourseSidebar.vue';
+import CourseList from './CourseList.vue';
+import CoursePagination from './CoursePagination.vue';
+</script>
