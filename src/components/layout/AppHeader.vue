@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="container px-5 mx-auto flex justify-between gap-3 items-center h-15">
     <el-icon class="lg:hidden! cursor-pointer hover:opacity-75 transition-opacity duration-150">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -8,6 +9,16 @@
     </el-icon>
     <router-link to="/" class="mr-auto">
       <img src="/logo.svg" alt="Brand Logo" />
+=======
+  <div class="container px-5 mx-auto flex justify-between gap-4 items-center h-15">
+    <app-sidebar></app-sidebar>
+    <router-link to="/" class="mr-auto lg:mr-0">
+      <img
+        src="/logo.svg" 
+        class="w-32 lg:w-41.75" 
+        alt="Brand Logo"
+      />
+>>>>>>> da1135dd26616c37242b47b6f7d8444425dec363
     </router-link>
     <el-menu :default-active="activeIndex" mode="horizontal" class="border-none! app-menu lg:flex! hidden!"
       :ellipsis="false" @select="handleSelect">
@@ -31,13 +42,24 @@
       <el-menu-item @click="$router.push('/premium')">Premium Theme</el-menu-item>
     </el-menu>
     <div class="flex items-center gap-3 sm:gap-5">
-      <el-icon @click="toggleTheme()" class="cursor-pointer hover:opacity-75 transition-opacity duration-150">
+      <el-icon @click="toggleTheme()" class="hidden! sm:block! cursor-pointer hover:opacity-75 transition-opacity duration-150">
         <Sunny color="#303133" v-if="currentTheme !== 'dark'" />
         <Moon color="#303133" v-else />
       </el-icon>
+<<<<<<< HEAD
       <lang-select></lang-select>
       <el-icon class="cursor-pointer hover:text-[#E6A23C]! transition-colors duration-300" color="#303133">
         <Search /> 
+=======
+      <div class="hidden! sm:block!">
+        <lang-select></lang-select>
+      </div>
+      <el-icon
+        class="cursor-pointer hover:text-[#E6A23C]! transition-colors duration-300"
+        color="#303133"
+      >
+        <Search />
+>>>>>>> da1135dd26616c37242b47b6f7d8444425dec363
       </el-icon>
       <el-button round type="warning" @click="$router.push('/login')">Login</el-button>
     </div>
@@ -46,6 +68,8 @@
 
 <script setup>
 import { ref } from 'vue'
+
+import AppSidebar from './AppSidebar.vue';
 import LangSelect from '../ui/LangSelect.vue';
 
 const activeIndex = ref('0')
@@ -59,21 +83,3 @@ const toggleTheme = () => {
   console.log('Toggle theme to:', currentTheme.value)
 }
 </script>
-
-<style>
-.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
-.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
-  color: #E6A23C !important;
-  background-color: #F5F5F5 !important;
-}
-
-.el-menu--horizontal .el-menu-item.is-active,
-.el-menu--horizontal .el-sub-menu.is-active {
-  --el-menu-active-color: #E6A23C !important;
-  border-color: var(--el-menu-active-color) !important;
-}
-
-.el-menu--horizontal .el-sub-menu:hover .el-sub-menu__title {
-  --el-menu-hover-text-color: #E6A23C !important;
-}
-</style>
