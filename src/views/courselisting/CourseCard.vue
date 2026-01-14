@@ -12,7 +12,7 @@
           <span v-if="author">By <span class="text-gray-900 font-medium">{{ author }}</span></span>
         </div>
         
-        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 cursor-pointer">
+        <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-orange-500 transition duration-200">
           {{ title }}
         </h3>
 
@@ -34,12 +34,12 @@
 
       <div class="flex items-center justify-between border-t border-gray-100 pt-4 mt-auto">
         <div class="flex items-center gap-2">
-          <span v-if="oldPrice" class="text-gray-400 text-sm">${{ oldPrice }}</span>
+          <span v-if="oldPrice" class="text-gray-400 line-through text-sm">${{ oldPrice }}</span>
           <span v-if="price === 'Free'" class="text-green-500 font-bold text-lg">Free</span>
           <span v-else class="text-orange-500 font-bold text-lg">${{ price }}</span>
         </div>
         
-        <button class="text-gray-700 font-semibold text-sm hover:text-orange-500 transition-colors flex items-center gap-1 group">
+        <button class="text-gray-700 font-semibold text-sm hover:text-orange-500 transition-colors flex items-center gap-1 group" @click="$router.push('/courseview')">
           View More <span class="group-hover:translate-x-1 transition-transform">→</span>
         </button>
       </div>
