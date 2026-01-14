@@ -12,10 +12,10 @@
             <div class="lg:col-span-1">
                 <CourseSidebar />
             </div>
-
-            <div class="col-span-1">
-                <CoursePagination />
-            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="col-span-1">
+            <CoursePagination />
         </div>
     </div>
 </template>
