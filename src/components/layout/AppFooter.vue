@@ -2,9 +2,7 @@
     <footer class="footer bg-gray-100">
         <div class="container mx-auto py-20 px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
             <div class="flex flex-col gap-8">
-                <router-link to="/">
-                    <img src="/logo.svg" alt="EduPress" class="w-41.75 h-auto">
-                </router-link>
+                <img src="/logo.svg" alt="EduPress" class="w-48 h-auto">
                 <p class="text-gray-500 text-sm leading-relaxed">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus consequuntur sed necessitatibus,
                     repudiandae fugit unde excepturi placeat officiis.
@@ -41,13 +39,13 @@
                         <li>Tel: + (123) 2500-567-8988</li>
                         <li>Email: support@gmail.com</li>
                     </ul>
-                <div class="flex gap-4 text-gray-500">
-                    <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-pinterest-p"></i></a>
-                    <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+                    <div class="flex gap-4 text-gray-500">
+                        <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-orange-500"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
 
