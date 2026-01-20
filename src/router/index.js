@@ -1,3 +1,4 @@
+import AuthLayout from '@/layouts/AuthLayout.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -19,17 +20,24 @@ const router = createRouter({
           name: 'Course',
           component: () => import('@/views/courselisting/Course.vue')
         },
+      ],
+    },
+    {
+      path: '/auth',
+      name: 'AuthLayout',
+      component: AuthLayout,
+      children: [
         {
           path: 'login',
           name: 'Login',
-          component: () => import('@/components/login/Login.vue')
+          component: () => import('@/views/auth/LoginView.vue')
         },
         {
           path: 'register',
           name: 'Register',
-          component: () => import('@/components/login/Register.vue')
+          component: () => import('@/views/auth/Register.vue')
         }
-      ],
+      ]
     }
   ],
 })
