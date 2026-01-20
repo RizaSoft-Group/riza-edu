@@ -20,30 +20,15 @@ const router = createRouter({
           component: () => import('@/views/courselisting/Course.vue')
         },
         {
-          path: 'blog',
-          name: 'Blog',
-          component: () => import('@/views/blog/Blog.vue')
-        },
-        {
-          path: 'page',
-          name: 'Page',
-          component: () => import('@/views/page/Page.vue')
-        },
-        {
-          path: 'error',
-          name: 'Error',
-          component: () => import('@/components/ui/ErrorAlert.vue')
-        },
-        {
           path: 'login',
           name: 'Login',
-          component: () => import('@/views/login/Login.vue')
+          component: () => import('@/components/login/Login.vue')
         },
         {
           path: 'register',
           name: 'Register',
-          component: () => import('@/views/login/Register.vue')
-        },
+          component: () => import('@/components/login/Register.vue')
+        }
       ],
     }
   ],
