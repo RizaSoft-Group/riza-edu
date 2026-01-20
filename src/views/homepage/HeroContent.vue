@@ -24,7 +24,6 @@
         </p>
         <el-button
           size="large"
-          type="button"
           class="rounded-[50px]! hover:bg-orange-400! bg-orange-500! text-white! border-0!"
         >
           Post Comment
