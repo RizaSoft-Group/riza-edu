@@ -295,5 +295,5 @@ const handleRegister = () => {
     justify-content: center;
     align-items: center;
   }
-}w
+}
 </style>
