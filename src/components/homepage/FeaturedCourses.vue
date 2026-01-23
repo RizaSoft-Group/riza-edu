@@ -4,8 +4,8 @@
         <div
             class="categories-header flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
             <div>
-                <h1 class="font-bold text-3xl mb-3">Featured Courses</h1>
-                <p class="text-gray-600">Explore our Popular Categories</p>
+                <h1 class="font-bold text-3xl mb-3">Kurslar ro'yxati</h1>
+                <p class="text-gray-600">Barcha kurslar bepul</p>
             </div>
 
             <!-- Filters & Actions -->
@@ -13,7 +13,7 @@
 
                 <!-- All Courses Button -->
                 <el-button type="warning" round size="large" @click="navigateToCourses">
-                    All Courses
+                    Kurslarni ko'rish
                 </el-button>
             </div>
         </div>
@@ -175,7 +175,7 @@ const categories = ref([
 const courses = ref([
     {
         id: 1,
-        title: 'Create An LMS Website With LearnPress',
+        title: 'Web dasturlash kurslari',
         image: '/featurecatigories/learnpress.jpg',
         category: 'Web Development',
         duration: '2 Weeks',
@@ -220,7 +220,7 @@ const courses = ref([
     },
     {
         id: 4,
-        title: 'Advanced JavaScript Course',
+        title: 'Kengaytirilgan JavaScript kursi',
         image: '/featurecatigories/js-img.png',
         category: 'Web Development',
         duration: '5 Weeks',
@@ -235,7 +235,7 @@ const courses = ref([
     },
     {
         id: 5,
-        title: 'React & Vue.js Differences',
+        title: 'React.Js & Vue.Js farqlari',
         image: '/featurecatigories/react-vue.webp',
         category: 'Framework',
         duration: '6 Weeks',
@@ -250,7 +250,7 @@ const courses = ref([
     },
     {
         id: 6,
-        title: 'UI/UX Design Fundamentals',
+        title: 'UI/UX dizayn boshlang\'ich darslar',
         image: '/featurecatigories/ux-ui.avif',
         category: 'Design',
         duration: '3 Weeks',

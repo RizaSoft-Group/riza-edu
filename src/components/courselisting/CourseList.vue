@@ -57,7 +57,7 @@ const courses = ref([
     oldPrice: 29.0
   },
   {
-    image: '/featurecatigories/image.jpg',
+    image: '/featurecatigories/angularcourse.jpg',
     category: 'Photography',
     author: 'Determined-Poitras',
     title: 'Create An LMS Website With LearnPress',
@@ -69,7 +69,7 @@ const courses = ref([
     oldPrice: 29.0
   },
   {
-    image: '/featurecatigories/image-1.jpg',
+    image: '/featurecatigories/.jpg',
     category: 'Photography',
     author: 'Determined-Poitras',
     title: 'Create An LMS Website With LearnPress',

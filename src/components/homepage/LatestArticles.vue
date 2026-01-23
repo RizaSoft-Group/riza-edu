@@ -3,12 +3,12 @@
     <div class="latest">
       <div class="categories-header flex justify-between items-center">
         <div>
-          <h1 class="font-bold text-3xl mb-4">Latest articles</h1>
-          <p>Explore our Free Articles</p>
+          <h1 class="font-bold text-3xl mb-4">HR ga tayyorlov kurslari</h1>
+          <p>Ishga kirish uchun tekin tayyorlov kurslari</p>
         </div>
         <router-link to="allcategories">
           <el-button type="warning" round size="large">
-            All Articles
+            Kursni ko'rish
           </el-button>
         </router-link>
       </div>
@@ -56,7 +56,7 @@ export default {
         },
         {
           id: 1,
-          image: '/latest/Rectangle_140.svg',
+          image: '/latest/HR.png',
           title: 'Best LearnPress WordPress Theme Collection for 2023',
           date: 'Jan 24, 2023',
           description: 'Looking for an amazing & well-functional LearnPress WordPress Theme?...',

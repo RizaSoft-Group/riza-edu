@@ -13,9 +13,9 @@
 
     <div class="categories-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-8">
       <router-link v-for="(cat, idx) in categories" :key="idx" :to="cat.path"
-        class="group block rounded-xl border border-gray-300 min-h-56 bg-white py-10 px-10 text-center  transition-transform duration-300 transform hover:-translate-y-3 hover:shadow-xl hover:text-orange-500"
+        class="group block rounded-xl border border-orange-300 min-h-56 bg-white py-10 px-10 text-center  transition-transform duration-300 transform hover:-translate-y-3 hover:shadow-xl hover:text-orange-500"
         :aria-label="cat.title">
-        <el-icon class="mb-4 text-orange-500" :size="40">
+        <el-icon class="mb-4 text-orange-500!" :size="40">
           <component :is="cat.icon" />
         </el-icon>
 
@@ -46,19 +46,19 @@ const categories = ref([
   {
     title: 'Art & Design',
     path: '/art-design',
-    count: 38,
+    count: 20,
     icon: EditPen
   },
   {
     title: 'Development',
     path: '/development',
-    count: 38,
+    count: 28,
     icon: ElementPlus
   },
   {
     title: 'Communication',
     path: '/communication',
-    count: 38,
+    count: 12,
     icon: Share
   },
   {
@@ -70,37 +70,37 @@ const categories = ref([
   {
     title: 'Photography',
     path: '/photography',
-    count: 38,
+    count: 35,
     icon: Camera
   },
   {
     title: 'Marketing',
     path: '/marketing',
-    count: 38,
+    count: 24,
     icon: Money
   },
   {
     title: 'Content Writing',
     path: '/content-writing',
-    count: 38,
+    count: 16,
     icon: Tickets
   },
   {
     title: 'Finance',
     path: '/finance',
-    count: 38,
+    count: 34,
     icon: OfficeBuilding
   },
   {
     title: 'Science',
     path: '/science',
-    count: 38,
+    count: 30,
     icon: Cpu
   },
   {
     title: 'Networking',
     path: '/networking',
-    count: 38,
+    count: 40,
     icon: Comment
   }
 ])

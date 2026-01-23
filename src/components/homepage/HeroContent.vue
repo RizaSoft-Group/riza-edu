@@ -17,16 +17,16 @@
         class="absolute w-xs md:w-sm lg:w-lg xl:w-2xl 2xl:w-244.25 xl:top-[calc(50%-160px)] 2xl:top-[calc(50%-209.5px)] right-[calc(50%-160px)] sm:right-0 -z-10"
       />
       <div class="flex flex-col items-center sm:items-start gap-4 lg:gap-6 w-130">
-        <h1 class="font-semibold text-2xl md:text-4xl lg:text-[50px] text-center sm:text-left">Build Skills With Online Course</h1>
+        <h1 class="font-semibold text-2xl md:text-4xl lg:text-[50px] text-center sm:text-left">Biz bilan ulkan natijalarga erishing</h1>
         <p class="text-sm md:text-base lg:text-lg text-gray-600 text-center sm:text-left">
-          We denounce wuth righteous indignation and dislike men who are so beguild and demoralized that cannot
-          trouble.
+          Rizvojlanish uchun imkoniyatni qo'ldan boy bermang
         </p>
         <el-button
+          @click="$router.push('comment')"
           size="large"
           class="rounded-[50px]! hover:bg-orange-400! bg-orange-500! text-white! border-0!"
         >
-          Post Comment
+          Fikr qoldirish
         </el-button>
       </div> 
       <img

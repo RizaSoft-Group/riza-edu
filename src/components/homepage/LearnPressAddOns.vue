@@ -8,7 +8,7 @@
                     Magical Inside</p>
                 <router-link to="/course">
                     <el-button type="warning" round size="large"> 
-                        Explorer Course
+                        Kursni ko'rish
                     </el-button>
                 </router-link>
             </div>
