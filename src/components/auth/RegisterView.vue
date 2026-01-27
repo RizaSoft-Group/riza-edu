@@ -4,22 +4,22 @@
     <el-form label-position="top" size="large" require>
       <!-- Username -->
       <el-form-item label="Username" class="mb-2">
-        <el-input placeholder="Enter your username"  type="text" required/>
+        <el-input v-model="registerForm.username" placeholder="Enter your username" clearable  type="text" required/>
       </el-form-item>
 
       <!-- Email -->
       <el-form-item label="Email" class="mb-2">
-        <el-input placeholder="Enter your email" clearable type="email" require/>
+        <el-input v-model="registerForm.email" placeholder="Enter your email" clearable type="email" require/>
       </el-form-item>
 
       <!-- Password -->
       <el-form-item label="Password" class="mb-2">
-        <el-input placeholder="Password" clearable type="password" require />
+        <el-input v-model="registerForm.password" placeholder="Password" clearable type="password" require />
       </el-form-item>
 
       <!-- Confirm Password -->
       <el-form-item label="Confirm password" class="mb-2">
-        <el-input placeholder="Confirm password" clearable type="password" require
+        <el-input v-model="registerForm.confirmPassword" placeholder="Confirm password" clearable type="password" require
         />
       </el-form-item>
 
@@ -69,10 +69,25 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
 import { ElMessage } from "element-plus";
 
+export default {
+  name: "RegisterView",
+  setup() {
+    const registerForm = ref({
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
+
+    return {
+      registerForm,
+    };
+  },
+}
 </script>
 
 <style scoped>

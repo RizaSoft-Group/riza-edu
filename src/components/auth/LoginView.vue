@@ -5,17 +5,17 @@
     <el-form ref="loginFormRef" label-position="top" size="large">
       <!-- Username/Email -->
       <el-form-item label="Email or Username" class="mb-3" prop="username">
-        <el-input placeholder="Enter your email or username" clearable />
+        <el-input v-model="loginForm.name" ref="rulFormRef" placeholder="Enter your email or username" clearable />
       </el-form-item>
 
       <!-- Password -->
       <el-form-item label="Password" class="mb-2" prop="password">
-        <el-input placeholder="Enter your password" clearable type="password" show-password/>
+        <el-input v-model="loginForm.password" placeholder="Enter your password" clearable type="password" show-password/>
       </el-form-item>
 
       <!-- Remember & Forgot -->
       <div class="flex items-center justify-between py-2">
-        <el-checkbox class="text-xs text-gray-600">Keep me logged in</el-checkbox>
+        <el-checkbox class="text-xs text-gray-600" v-model="loginForm.rememberMe">Keep me logged in</el-checkbox>
         <el-link @click="$router.push('updatepssword')" type="primary" class="text-xs">
           Forgot password?
         </el-link>
@@ -59,11 +59,37 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
+<script >
+import {reactive, ref } from "vue";
 import { useRouter } from "vue-router";
 import { ElMessage } from "element-plus";
 
+export default{
+  name: "LoginView",
+
+  setup() {
+    const loginFormRef = ref(null);
+    const loginForm = reactive({
+      username: "",
+      password: "",
+      rememberMe: false,
+    });
+
+    const router = useRouter();
+
+    const handleLogin = () => {
+      // Implement login logic here
+      ElMessage.success("Login successful!");
+      router.push("/dashboard"); // Redirect to dashboard after login
+    };
+
+    return {
+      loginFormRef,
+      loginForm,
+      handleLogin,
+    };
+  },
+}
 const router = useRouter();
 </script>
 
