@@ -2,7 +2,7 @@
   <div class="form-container">
     <h1 class="text-4xl font-medium mb-8 text-gray-800">Login</h1>
 
-    <el-form ref="loginFormRef" label-position="top" size="large">
+    <el-form ref="loginFormRef" @submit.prevent="handleLogin" label-position="top" size="large">
       <!-- Username/Email -->
       <el-form-item label="Email or Username" class="mb-3" prop="username">
         <el-input v-model="loginForm.name" ref="rulFormRef" placeholder="Enter your email or username" clearable />
@@ -80,7 +80,7 @@ export default{
     const handleLogin = () => {
       // Implement login logic here
       ElMessage.success("Login successful!");
-      router.push("/dashboard"); // Redirect to dashboard after login
+      router.push("/"); // Redirect to dashboard after login
     };
 
     return {
