@@ -2,15 +2,15 @@
   <div class="form-container">
     <h1 class="text-4xl font-medium mb-8 text-gray-800">Login</h1>
 
-    <el-form ref="loginFormRef" @submit.prevent="handleLogin" label-position="top" size="large">
+    <el-form ref="loginFormRef" @submit.prevent="loginUser" label-position="top" size="large">
       <!-- Username/Email -->
       <el-form-item label="Email or Username" class="mb-3" prop="username">
-        <el-input v-model="loginForm.name" ref="rulFormRef" placeholder="Enter your email or username" clearable />
+        <el-input v-model="loginForm.name" ref="rulFormRef" placeholder="Enter your email or username" required clearable />
       </el-form-item>
 
       <!-- Password -->
       <el-form-item label="Password" class="mb-2" prop="password">
-        <el-input v-model="loginForm.password" placeholder="Enter your password" clearable type="password" show-password/>
+        <el-input v-model="loginForm.password" placeholder="Enter your password" clearable type="password" required show-password/>
       </el-form-item>
 
       <!-- Remember & Forgot -->
@@ -77,16 +77,15 @@ export default{
 
     const router = useRouter();
 
-    const handleLogin = () => {
-      // Implement login logic here
+    const loginUser = () => {
       ElMessage.success("Login successful!");
-      router.push("/"); // Redirect to dashboard after login
+      router.push("/");
     };
 
     return {
       loginFormRef,
       loginForm,
-      handleLogin,
+      loginUser,
     };
   },
 }
