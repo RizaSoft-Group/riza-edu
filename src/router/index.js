@@ -1,5 +1,6 @@
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
+import { useAuthStore } from '@/stores/auth/useAuthStore';
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -28,13 +29,32 @@ const router = createRouter({
       component: AuthLayout,
       children: [
         {
-          path: 'login',
-          name: 'Auth',
-          component: () => import('@/views/Auth.vue')
+          path: 'signin',
+          name: 'SignIn',
+          component: () => import('@/views/auth/SignInView.vue')
         },
       ]
     }
   ],
+});
+
+router.beforeEach(async (to, from, next) => {
+    const auth_store = useAuthStore();
+
+  if (to.name === 'SignIn' && auth_store.user?.name) {
+    return next({ path: '/' });
+  }
+
+  if (to.name !== 'SignIn') {
+    try {
+      await auth_store.verify();
+      next();
+    } catch (error) {
+      next({ name: 'SignIn' });
+    }
+  } else {
+    next();
+  }
 })
 
 export default router
