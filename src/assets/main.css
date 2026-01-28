@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+body {
+  font-family:
+  Inter, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
 .el-menu--vertical .el-menu-item:not(.is-disabled):focus,
 .el-menu--vertical .el-menu-item:not(.is-disabled):hover
 .el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
