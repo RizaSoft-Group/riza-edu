@@ -2,20 +2,20 @@
   <div class="form-container">
     <h1 class="text-4xl font-medium mb-8 text-gray-800">Login</h1>
 
-    <el-form ref="loginFormRef" @submit.prevent="loginUser" label-position="top" size="large">
+    <el-form ref="loginFormRef" @submit.prevent="user" label-position="top" size="large">
       <!-- Username/Email -->
       <el-form-item label="Email or Username" class="mb-3" prop="username">
-        <el-input v-model="loginForm.name" ref="rulFormRef" placeholder="Enter your email or username" required clearable />
+        <el-input v-model="user.name" ref="rulFormRef" placeholder="Enter your email or username" required clearable />
       </el-form-item>
 
       <!-- Password -->
       <el-form-item label="Password" class="mb-2" prop="password">
-        <el-input v-model="loginForm.password" placeholder="Enter your password" clearable type="password" required show-password/>
+        <el-input v-model="user.password" placeholder="Enter your password" clearable type="password" required show-password/>
       </el-form-item>
 
       <!-- Remember & Forgot -->
       <div class="flex items-center justify-between py-2">
-        <el-checkbox class="text-xs text-gray-600" v-model="loginForm.rememberMe">Keep me logged in</el-checkbox>
+        <el-checkbox class="text-xs text-gray-600" v-model="user.rememberMe">Keep me logged in</el-checkbox>
         <el-link @click="$router.push('updatepssword')" type="primary" class="text-xs">
           Forgot password?
         </el-link>
@@ -23,7 +23,7 @@
 
       <!-- Submit Button -->
       <el-form-item class="mt-4">
-        <el-button type="primary" native-type="submit" class="w-full">
+        <el-button :loading="loading" @click="signIn()" type="primary" native-type="submit" class="w-full">
           LOGIN
         </el-button>
       </el-form-item>
@@ -48,48 +48,44 @@
       </div>
 
       <!-- reCAPTCHA Notice -->
-      <p class="text-[12px] text-gray-400 text-center pt-4 leading-tight">
+      <!-- <p class="text-[12px] text-gray-400 text-center pt-4 leading-tight">
         This site is protected by reCAPTCHA and the Google
         <el-link type="primary" :underline="false" href="#" class="text-[10px]">Privacy Policy</el-link>
         and
         <el-link type="primary" :underline="false" href="#" class="text-[10px]">Terms of Service</el-link>
         apply.
-      </p>
+      </p> -->
     </el-form>
   </div>
 </template>
 
-<script >
-import {reactive, ref } from "vue";
+<script setup>
+import {reactive, ref, toRaw } from "vue";
 import { useRouter } from "vue-router";
 import { ElMessage } from "element-plus";
+import { useAuthStore } from "@/stores/auth/useAuthStore";
+import { storeToRefs } from "pinia";
 
-export default{
-  name: "LoginView",
+const auth_store = useAuthStore();
+const { loading } = storeToRefs(auth_store);
 
-  setup() {
-    const loginFormRef = ref(null);
-    const loginForm = reactive({
-      username: "",
-      password: "",
-      rememberMe: false,
-    });
+const loginFormRef = ref(null);
+const user = reactive({
+  username: "",
+  password: "",
+  rememberMe: false,
+});
 
-    const router = useRouter();
-
-    const loginUser = () => {
-      ElMessage.success("Login successful!");
-      router.push("/");
-    };
-
-    return {
-      loginFormRef,
-      loginForm,
-      loginUser,
-    };
-  },
-}
 const router = useRouter();
+
+const signIn = () => {
+  ElMessage.success("Login successful!");
+  auth_store.signIn(toRaw(user));
+  setTimeout(() => {
+    router.push("/");
+  }, 1500);
+};
+  
 </script>
 
 <style scoped>
