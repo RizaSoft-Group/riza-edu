@@ -37,9 +37,9 @@
       </el-icon>
       <div class="flex items-center gap-4">
         <!-- LOGIN -->
-        <router-link v-if="isAuth" to="auth/login">
+        <router-link v-if="!user?.name" to="auth/signin">
           <button class="px-6 py-2 bg-orange-500 text-white rounded-[20px] cursor-pointer">
-            Login
+            Sign In
           </button>
         </router-link>
 
@@ -71,16 +71,20 @@ import { isAuthenticated, getCurrentUser, logoutUser } from '@/utils/auth'
 
 import AppSidebar from './AppSidebar.vue'
 import LangSelect from '../ui/LangSelect.vue'
+import { useAuthStore } from '@/stores/auth/useAuthStore'
+import { storeToRefs } from 'pinia'
 
-const router = useRouter()
+const router = useRouter();
+const auth_store = useAuthStore();
+const { user } = storeToRefs(auth_store);
 
 // AUTH
-const isAuth = ref(false)
-const username = ref("")
+const isAuth = ref(false);
+const username = ref("");
 
 onMounted(() => {
-  isAuth.value = isAuthenticated()
-  username.value = getCurrentUser()
+  isAuth.value = isAuthenticated();
+  username.value = getCurrentUser();
 })
 
 const logout = () => {
