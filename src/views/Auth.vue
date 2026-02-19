@@ -8,7 +8,7 @@
         </div>
       </div>
       <!-- right content -->
-      <div class="content-section flex flex-col justify-center items-center p-8 bg-white md:col-span-2 relative">
+      <div class="flex flex-col justify-center items-center p-8 bg-white md:col-span-2 relative">
         <!-- Back to Home Button -->
         <el-button type="primary" @click="$router.push('/')" class="absolute! top-5 right-5">
           <el-icon :size="18">

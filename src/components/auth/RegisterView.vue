@@ -86,12 +86,12 @@ export default {
 
     const handleRegister = async () => {
       if (registerForm.value.password !== registerForm.value.confirmPassword) {
-        ElMessage.error("Parollar mos kelmadi");
+        ElMessage.error("Password error");
         return;
       }
 
       try {
-        ElMessage.success("Ro'yxatdan o'ttingiz!");
+        ElMessage.success("Regiter!");
         router.push('/');
       } catch (error) {
         ElMessage.error("Ro'yxatdan o'tishda xato");

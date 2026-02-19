@@ -37,7 +37,7 @@
       </el-icon>
       <div class="flex items-center gap-4">
         <!-- LOGIN -->
-        <router-link v-if="isAuth" to="auth/login">
+        <router-link v-if="!isAuth" to="auth/login">
           <button class="px-6 py-2 bg-orange-500 text-white rounded-[20px] cursor-pointer">
             Login
           </button>
@@ -46,7 +46,7 @@
         <!-- USER -->
         <div v-else class="flex items-center gap-3">
           <el-dropdown :hide-on-click="false">
-            <span class="el-dropdown-link">cd<el-icon class="el-icon--right"><arrow-down /></el-icon>
+            <span class="el-dropdown-link">Accaunt<el-icon class="el-icon--right"><arrow-down /></el-icon>
             </span>
             <template #dropdown>
               <el-dropdown-menu>
