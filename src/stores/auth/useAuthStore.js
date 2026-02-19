@@ -1,19 +1,22 @@
 import { defineStore } from "pinia";
-import { useApiStore } from "../api/useApiStore";
 
 import { ref } from "vue";
 import router from "@/router";
-import cookies from "vue-cookies";
+// import { useApiStore } from "../api/useApiStore";
 
 export const useAuthStore = defineStore('authStore', () => {
-  const api = useApiStore()
+  // const api = useApiStore();
   
-  const loading = ref(false)
+  const loading = ref(false);
+  const user = ref(null);
 
-  const login = async (data) => {
-    loading.value = true
+  const signIn = async (data) => {
+    loading.value = true;
     try {
-      const res = await api.post('/auth/login', data);
+      // const res = await api.post('/auth/login', data);
+
+      localStorage.setItem("credentals", JSON.stringify(data));
+      user.value = { ...data };
 
       // const { access_token, user: userData } = res;
       // token_store.setToken(access_token);
@@ -35,5 +38,22 @@ export const useAuthStore = defineStore('authStore', () => {
     }
   }
 
-  return { user, loading, login }
+  const verify = async () => {
+    // const res = await api.get('/auth/verify');
+    // user.value = res.data;
+    const userData = localStorage.getItem("credentals");
+
+    user.value = { ...JSON.parse(userData) }
+  }
+
+  const signUp = async (data) => {
+    // const res = await api.post('/auth/signup', data);
+    // user.value = res.data;
+
+    setTimeout(() => {
+      router.replace("/auth/login");
+    }, 1500);
+  }
+
+  return { user, loading, signIn, verify, signUp }
 })
